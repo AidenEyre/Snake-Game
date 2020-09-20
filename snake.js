@@ -26,8 +26,8 @@ function Snake() {
     this.y += this.ySpeed;
 
     if (
-      this.x > canvas.width ||
-      this.y > canvas.height ||
+      this.x >= canvas.width ||
+      this.y >= canvas.height ||
       this.x < 0 ||
       this.y < 0
     ) {
