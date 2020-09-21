@@ -4,12 +4,13 @@ if (
     navigator.userAgent
   )
 ) {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight / 2;
+  canvas.width = window.innerWidth - (window.innerWidth%30);
+  canvas.height = (window.innerHeight - (window.innerHeight%30)) / 2;
 } else {
   canvas.width = 600;
   canvas.height = 600;
 }
+document.querySelector(".GameWindow").style.margin = "0px auto 0px auto";
 const ctx = canvas.getContext("2d");
 const scale = 30;
 const rows = canvas.height / (scale + 5);

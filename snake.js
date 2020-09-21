@@ -48,20 +48,20 @@ function Snake() {
         break;
       case "Right":
         if (this.xSpeed >= 0) {
-        this.xSpeed = scale * 1;
-        this.ySpeed = 0;
+          this.xSpeed = scale * 1;
+          this.ySpeed = 0;
         }
         break;
       case "Left":
         if (this.xSpeed <= 0) {
-        this.xSpeed = -scale * 1;
-        this.ySpeed = 0;
+          this.xSpeed = -scale * 1;
+          this.ySpeed = 0;
         }
         break;
       case "Down":
         if (this.ySpeed >= 0) {
-        this.xSpeed = 0;
-        this.ySpeed = scale * 1;
+          this.xSpeed = 0;
+          this.ySpeed = scale * 1;
         }
         break;
     }

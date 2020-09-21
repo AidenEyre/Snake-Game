@@ -8,6 +8,9 @@ body {
   padding: 0;
   overflow: hidden;
 }
+.GameWindow {
+  display: block;
+}
 
 .buttons {
   display: none;
@@ -22,8 +25,12 @@ body {
   .buttonDown,
   .buttonLeft,
   .buttonRight {
-    padding: 5%;
-    height: 5%;
+    padding: 15%;
+    height: 15%;
+  }
+
+  .buttonUp {
+    margin-top: 1%;
   }
 
   .buttonUp,
