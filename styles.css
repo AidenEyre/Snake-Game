@@ -8,3 +8,49 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+.buttons {
+  display: none;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .buttons {
+    display: block;
+  }
+
+  .buttonUp,
+  .buttonDown,
+  .buttonLeft,
+  .buttonRight {
+    padding: 5%;
+    height: 5%;
+  }
+
+  .buttonUp,
+  .buttonDown {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .buttonLeft,
+  .buttonRight {
+    width: 50%;
+  }
+
+  .buttonLeft {
+    display: block;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonRight {
+    display: block;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

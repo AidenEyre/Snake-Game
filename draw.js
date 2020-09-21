@@ -41,3 +41,24 @@ window.addEventListener("keydown", (evt) => {
   const direction = evt.key.replace("Arrow", "");
   snake.changeDirection(direction);
 });
+
+var btnUp = document
+  .getElementById("buttonUp")
+  .addEventListener("click", (evt) => {
+    snake.changeDirection("Up");
+  });
+var btnRight = document
+  .getElementById("buttonRight")
+  .addEventListener("click", (evt) => {
+    snake.changeDirection("Right");
+  });
+var btnDown = document
+  .getElementById("buttonDown")
+  .addEventListener("click", (evt) => {
+    snake.changeDirection("Down");
+  });
+var btnLeft = document
+  .getElementById("buttonLeft")
+  .addEventListener("click", (evt) => {
+    snake.changeDirection("Left");
+  });
