@@ -35,7 +35,7 @@ var snake;
 
     snake.checkCollision();
     // document.querySelector(".score").innerText = snake.total;
-  }, 100);
+  }, 170);
 })();
 
 window.addEventListener("keydown", (evt) => {
