@@ -17,6 +17,7 @@ const rows = canvas.height / (scale + 5);
 const columns = canvas.width / (scale + 5);
 
 var snake;
+document.querySelector(".highScore").innerText = window.localStorage.getItem('highScore');
 
 (function setup() {
   snake = new Snake();
@@ -34,8 +35,8 @@ var snake;
     }
 
     snake.checkCollision();
-    // document.querySelector(".score").innerText = snake.total;
-  }, 170);
+    document.querySelector(".score").innerText = snake.total;
+  }, 140);
 })();
 
 window.addEventListener("keydown", (evt) => {

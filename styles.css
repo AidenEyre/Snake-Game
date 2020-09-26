@@ -60,4 +60,16 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .score {
+    left: 5%;
+  }
+}
+
+#Score h1 {
+  display: inline;
+}
+
+#highScore h1 {
+  display: inline;
 }

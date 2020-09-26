@@ -31,6 +31,7 @@ function Snake() {
       this.x < 0 ||
       this.y < 0
     ) {
+      this.updateHighScore(this.total);
       this.total = 0;
       this.tail = [];
       this.x = 150;
@@ -78,9 +79,17 @@ function Snake() {
   this.checkCollision = function () {
     for (var i = 0; i < this.tail.length; i++) {
       if (this.x === this.tail[i].x && this.y === this.tail[i].y) {
+        this.updateHighScore(this.total);
         this.total = 0;
         this.tail = [];
       }
+    }
+  };
+
+  this.updateHighScore = function (num) {
+    if(num > window.localStorage.getItem('highScore')) {
+      window.localStorage.setItem('highScore', this.total);
+      document.querySelector(".highScore").innerText = this.total;
     }
   };
 }
