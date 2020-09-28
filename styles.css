@@ -1,4 +1,12 @@
 @charset "utf-8";
+/* 
+  CSS Styles for Snake-Game
+   
+   Author: Aiden Eyre
+   Date:   27 September 2020
+   
+   Filename: styles.css 
+*/
 
 html,
 body {
@@ -7,26 +15,35 @@ body {
   margin: auto;
   padding: 0;
   overflow: hidden;
+  background-color: #4e4e4e79;
 }
 .GameWindow {
   display: block;
+  background-color: #B5D81A;
 }
 
 .buttons {
   display: none;
 }
 
+
+
+/* Styles to handle mobile */
+
 @media only screen and (max-device-width: 768px) {
   .buttons {
     display: block;
+    background-color: #4e4e4e79;
+    margin-top: 3%;
   }
 
-  .buttonUp,
-  .buttonDown,
-  .buttonLeft,
-  .buttonRight {
-    padding: 12%;
-    height: 12%;
+  .buttons button {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color: #9B7653;
+    font-size: 2em;
+    padding: 9%;
+    font-weight: 800;
+    border: 1px solid black;
   }
 
   .buttonUp {
@@ -61,6 +78,13 @@ body {
     margin-right: auto;
   }
 
+  .buttons button:hover {background-color: #9B7653}
+
+  .buttons button:active {
+    background-color: #8a6849;
+    transform: translateY(4px);
+  }
+
   #scoreInfo {
     position: absolute;
     margin-left: 5%;
@@ -72,6 +96,8 @@ body {
     color: rgba(0, 0, 0, 0.603);
   }
 }
+
+/* Styles for Desktop */
 
 #Score h1 {
   display: inline;
