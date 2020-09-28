@@ -34,20 +34,23 @@ body {
   .buttons {
     display: block;
     background-color: #4e4e4e79;
-    margin-top: 3%;
+    margin: 3%;
   }
 
   .buttons button {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    background-color: #9B7653;
+    background-color: #2F4F4F;
+    /* color: white; */
     font-size: 2em;
     padding: 9%;
     font-weight: 800;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    color: #333;
+    box-shadow: -3px 3px #36363679, -2px 2px #36363679, -1px 1px #36363679;
+    border: 1px solid #36363679;
   }
 
   .buttonUp {
-    margin-top: 1%;
   }
 
   .buttonUp,
@@ -57,17 +60,18 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    margin: 1% 1% 2% 1%;
   }
 
   .buttonLeft,
   .buttonRight {
-    width: 50%;
+    width: 48%;
+    margin: 1% 0 2% 1%;
   }
 
   .buttonLeft {
     display: block;
     float: left;
-    margin-left: auto;
     margin-right: auto;
   }
 
@@ -78,11 +82,13 @@ body {
     margin-right: auto;
   }
 
-  .buttons button:hover {background-color: #9B7653}
+  .buttons button:hover {background-color: #4e4e4ed5}
 
   .buttons button:active {
-    background-color: #8a6849;
+    background-color: #4e4e4ed5;
     transform: translateY(4px);
+    box-shadow: none;
+    border: none;
   }
 
   #scoreInfo {
