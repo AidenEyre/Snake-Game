@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* 
   CSS Styles for Snake-Game
    
@@ -15,11 +16,14 @@ body {
   margin: auto;
   padding: 0;
   overflow: hidden;
-  background-color: #4e4e4e79;
+  background-color: #545454;
 }
+
 .GameWindow {
   display: block;
-  background-color: #B5D81A;
+  background-color: #77cc92;
+  border: 2px solid #342a21;
+  border-radius: 10px;
 }
 
 .buttons {
@@ -27,83 +31,75 @@ body {
 }
 
 
+/* Styles for Desktop */
 
-/* Styles to handle mobile */
-
-@media only screen and (max-device-width: 768px) {
-  .buttons {
-    display: block;
-    background-color: #4e4e4e79;
-    margin: 3%;
-  }
-
-  .buttons button {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    background-color: #2F4F4F;
-    /* color: white; */
-    font-size: 2em;
-    padding: 9%;
-    font-weight: 800;
-    /* border: 1px solid black; */
-    color: #333;
-    box-shadow: -3px 3px #36363679, -2px 2px #36363679, -1px 1px #36363679;
-    border: 1px solid #36363679;
-  }
-
-  .buttonUp {
-  }
-
-  .buttonUp,
-  .buttonDown {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    margin: 1% 1% 2% 1%;
-  }
-
-  .buttonLeft,
-  .buttonRight {
-    width: 48%;
-    margin: 1% 0 2% 1%;
-  }
-
-  .buttonLeft {
-    display: block;
-    float: left;
-    margin-right: auto;
-  }
-
-  .buttonRight {
-    display: block;
-    float: right;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .buttons button:hover {background-color: #4e4e4ed5}
-
-  .buttons button:active {
-    background-color: #4e4e4ed5;
-    transform: translateY(4px);
-    box-shadow: none;
-    border: none;
-  }
-
-  #scoreInfo {
-    position: absolute;
-    margin-left: 5%;
-  }
-
-  #Score h1,
-  #highScore h1 {
-    display: block;
-    color: rgba(0, 0, 0, 0.603);
-  }
+.buttons {
+  background-color: #545454;
+  margin: 3% 2%;
 }
 
-/* Styles for Desktop */
+.buttons button {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color: #71816d;
+  font-size: 2em;
+  font-weight: 800;
+  color: #333;
+  box-shadow: -5px 5px #36363654, -4px 4px #36363648, -3px 3px #3636364d;
+  border: 1px solid #36363679;
+  border-radius: 15px;
+}
+
+.buttonUp,
+.buttonDown {
+  clear: both;
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+  padding: 7%;
+}
+
+.buttonLeft,
+.buttonRight {
+  padding: 9%;
+  width: 45%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.buttonLeft {
+  display: block;
+  float: left;
+}
+
+.buttonRight {
+  display: block;
+  float: right;
+}
+
+.buttons button:hover {
+  background-color: #71816d;
+  outline: none;
+}
+
+.buttons button:active {
+  background-color: #71816d;
+  transform: translateY(4px) translateX(-4px);
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+#scoreInfo {
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+#Score h1,
+#highScore h1 {
+  display: block;
+  color: #342a21cb;
+}
 
 #Score h1 {
   display: inline;
@@ -111,4 +107,21 @@ body {
 
 #highScore h1 {
   display: inline;
+}
+
+/* Switch Device Button */
+
+#switchDevice {
+  display: block;
+  float: left;
+  width: 20%;
+  transform: translateY(-100%);
+  border: none;
+  background-color: #71816d;
+  color: #333;
+
+  box-shadow: -5px 5px #36363654, -4px 4px #36363648, -3px 3px #3636364d;
+  border: 1px solid #36363679;
+  border-radius: 15px;
+  margin-left: 2%;
 }

@@ -7,6 +7,7 @@
    Filename: draw.js
 */
 let canvas = document.querySelector(".GameWindow");
+let useMobile = false;
 
 // If the user is on mobile adjust canvas size accordingly.
 if (
@@ -14,13 +15,24 @@ if (
     navigator.userAgent
   )
 ) {
+  document.getElementById("switchDevice").style.display = "none";
+  document.getElementById("buttons").style.display = "block";
   canvas.width = window.innerWidth - (window.innerWidth % 30);
   canvas.height = (window.innerHeight - (window.innerHeight % 30)) / 2;
+}
+// This else if is so that people can see what mobile looks like on desktop.
+else if (useMobile === true) {
+  document.body.style.width = "25%";
+  document.getElementById("buttons").style.display = "block";
+  var width = document.getElementById("body").offsetWidth;
+  var height = document.getElementById("body").offsetHeight;
+  canvas.width = width - (width % 30);
+  canvas.height = (height - (height % 30)) / 2;
 } else {
   canvas.width = 600;
   canvas.height = 600;
 }
-document.querySelector(".GameWindow").style.margin = "0px auto 0px auto";
+document.querySelector(".GameWindow").style.margin = "2% auto 0 auto";
 const ctx = canvas.getContext("2d");
 const scale = 30;
 const rows = canvas.height / (scale + 5);
@@ -79,4 +91,25 @@ var btnLeft = document
   .getElementById("buttonLeft")
   .addEventListener("click", (evt) => {
     snake.changeDirection("Left");
+  });
+
+// Try on mobile for desktop
+var btnUp = document
+  .getElementById("switchDevice")
+  .addEventListener("click", (evt) => {
+    if (useMobile === false) {
+      document.body.style.width = "25%";
+      document.getElementById("buttons").style.display = "block";
+      var width = document.getElementById("body").offsetWidth;
+      var height = document.getElementById("body").offsetHeight;
+      canvas.width = width - (width % 30);
+      canvas.height = (height - (height % 30)) / 2;
+      useMobile = true;
+    } else {
+      document.body.style.width = "99%";
+      document.getElementById("buttons").style.display = "none";
+      canvas.width = 600;
+      canvas.height = 600;
+      useMobile = false;
+    }
   });

@@ -12,7 +12,7 @@
     <title>Snake Game</title>
   </head>
 
-  <body>
+  <body id="body">
     <section id="scoreInfo">
       <div id="Score">
         <h1>Score:</h1>
@@ -26,12 +26,13 @@
     </section>
 
     <canvas class="GameWindow"></canvas>
-    <div class="buttons">
+    <div id="buttons" class="buttons">
       <button class="buttonUp" id="buttonUp">Up</button>
       <button class="buttonLeft" id="buttonLeft">Left</button>
       <button class="buttonRight" id="buttonRight">Right</button>
       <button class="buttonDown" id="buttonDown">Down</button>
     </div>
+    <button id="switchDevice">Try On Mobile</button>
   </body>
 
   <link rel="stylesheet" href="styles.css" />
